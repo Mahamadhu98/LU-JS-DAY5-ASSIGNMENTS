@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <h1>DAY 5 - ASSIGNMENT 1 - Map and Filter</h1>
+    </head>
+    <body>
+        <script>
+            var input = Number(prompt ("enter a limit ?"));
+            var arr = []
+            for(let i=1;i<input;i++)
+            arr.push(i)
+            let odd_cubes = arr.filter(element => element%2!=0).map(element => element**3)
+            console.log(odd_cubes)
+
+            
+        </script>
+    </body>
+</html>
