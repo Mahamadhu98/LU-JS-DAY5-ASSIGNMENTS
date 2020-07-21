@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <h1>
+            DAY 5 - ASSIGNMENT 2 - CLASSES        </h1>
+    </head>
+    <body>
+        <script>
+            class User
+            {
+                constructor(name,age,email,lucoins,courses)
+                {
+                    this.name = name;
+                    this.age=age;
+                    this.email=email;
+                    this.lucoins = lucoins;
+                    
+                    
+                    console.log(`name=${this.name} age = ${this.age} email=${this.email} coins = ${this.lucoins} `)
+                }
+                login()
+                {
+                    console.log(`${this.name} has Logged In ...`);
+                    return this ; 
+                }
+                logout()
+                {
+                    console.log(`${this.name} has Logged Out ...`);
+                    return this;
+                }
+            }
+            class Moderater extends User
+            {
+                constructer(name,age,email,lucoins)
+                {
+                    Super(name,age,email,lucoins);  
+                }
+                 addCoins()
+                 {  this.lucoins++;
+                    console.log(`coins add =${this.lucoins}`);
+                    return this;
+                 }
+                 deleteCoins()
+                 {  
+                    this.lucoins--;
+                    console.log(`coins delete =${this.lucoins}`);
+                    return this;
+                 }
+            }
+            class Admin extends Moderater
+            {
+                constructer(name,age,email,lucoins,courses)
+                {
+                    Super(name,age,email,lucoins,); 
+                    
+                }
+                
+                addCourse(c1)
+                {
+                    var list =[ ] 
+                    list.push(c1);
+                    console.log(`courses add = ${list}`);
+                }
+                
+                
+
+            }
+
+            obj1 = new Admin('maha',21,'m@gmail.com',0," ");
+            obj1.login()
+            obj1.addCoins()
+            obj1.addCoins()
+            obj1.deleteCoins()
+            obj1.addCourse("c++")
+            obj1.addCourse("Python")
+            
+
+            obj1.logout()
+
+
+        </script>
+    </body>
+</html>
